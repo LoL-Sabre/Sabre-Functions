@@ -57,13 +57,17 @@ namespace Functions
         {
             uint hash = 2486;
             string alphabeth = "abcdefghijklmnopqrstuvwxyz0123456789-_";
+            char[] charString = stringToHash.ToCharArray();
             stringToHash = stringToHash.ToLower();
             for(int i = 0; i < stringToHash.Length; i++)
             {
                 hash = hash ^ stringToHash[i];
-                foreach(Match m in Regex.Matches())
+                foreach(Match m in Regex.Matches(alphabeth, Convert.ToString(charString[i])))
                 {
-
+                    if(m.Success)
+                    {
+                        hash *= (uint)m.Index;
+                    }
                 }
             }
             return hash;
