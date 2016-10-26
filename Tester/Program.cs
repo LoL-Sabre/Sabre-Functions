@@ -23,17 +23,6 @@ namespace Tester
                 }
                 Console.ReadLine();
             }
-            else if(inp[0] == "SHA")
-            {
-                byte[] sha = Functions.Functions.XXHash(inp[1]);
-                string shas = "";
-                foreach(byte b in sha)
-                {
-                    shas += b;
-                }
-                Console.WriteLine(shas);
-                Console.ReadLine();
-            }
             else if(inp[0] == "PUBKEY")
             {
                 string key = "";

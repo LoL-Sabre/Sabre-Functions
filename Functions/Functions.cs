@@ -211,6 +211,31 @@ namespace Functions
             return vector;
         }
 
+        public static double[] DoubleVector2(double x, double y)
+        {
+            double[] vector = new double[2];
+            vector[0] = x;
+            vector[1] = y;
+            return vector;
+        }
+        public static double[] DoubleVector3(double x, double y, double z)
+        {
+            double[] vector = new double[3];
+            vector[0] = x;
+            vector[1] = y;
+            vector[2] = z;
+            return vector;
+        }
+        public static double[] DoubleVector4(double x, double y, double z, double w)
+        {
+            double[] vector = new double[4];
+            vector[0] = x;
+            vector[1] = y;
+            vector[2] = z;
+            vector[3] = w;
+            return vector;
+        }
+
         public static double[] XRGBAVector(double time, double r, double g, double b, double a)
         {
             double[] vector = new double[5];
