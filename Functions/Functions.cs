@@ -161,14 +161,14 @@ namespace Functions
             return db;
         }
 
-        public static int[] Vector2(int x, int y)
+        public static int[] IntVector2(int x, int y)
         {
             int[] vector = new int[2];
             vector[0] = x;
             vector[1] = y;
             return vector;
         }
-        public static int[] Vector3(int x, int y, int z)
+        public static int[] IntVector3(int x, int y, int z)
         {
             int[] vector = new int[3];
             vector[0] = x;
@@ -176,7 +176,7 @@ namespace Functions
             vector[2] = z;
             return vector;
         }
-        public static int[] Vector4(int x, int y, int z, int w)
+        public static int[] IntVector4(int x, int y, int z, int w)
         {
             int[] vector = new int[4];
             vector[0] = x;
@@ -229,6 +229,31 @@ namespace Functions
         public static double[] DoubleVector4(double x, double y, double z, double w)
         {
             double[] vector = new double[4];
+            vector[0] = x;
+            vector[1] = y;
+            vector[2] = z;
+            vector[3] = w;
+            return vector;
+        }
+
+        public static byte[] ByteVector2(byte x, byte y)
+        {
+            byte[] vector = new byte[2];
+            vector[0] = x;
+            vector[1] = y;
+            return vector;
+        }
+        public static byte[] ByteVector3(byte x, byte y, byte z)
+        {
+            byte[] vector = new byte[3];
+            vector[0] = x;
+            vector[1] = y;
+            vector[2] = z;
+            return vector;
+        }
+        public static byte[] ByteVector4(byte x, byte y, byte z, byte w)
+        {
+            byte[] vector = new byte[4];
             vector[0] = x;
             vector[1] = y;
             vector[2] = z;
