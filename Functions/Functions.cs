@@ -87,6 +87,18 @@ namespace Functions
             }
             return hash;
         }
+        public static string Md5(string stringToHash)
+        {
+            StringBuilder sb = new StringBuilder();
+            byte[] hash = Encoding.ASCII.GetBytes(stringToHash);
+            MD5 md5 = MD5.Create();
+            hash = md5.ComputeHash(hash);
+            for(int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
         public static byte[] Sha256(string hashInput)
         {
             System.Security.Cryptography.SHA256 sha256 = new System.Security.Cryptography.SHA256Managed();

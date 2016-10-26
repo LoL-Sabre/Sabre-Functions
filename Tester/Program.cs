@@ -44,6 +44,11 @@ namespace Tester
                 Console.WriteLine(key);
                 Console.ReadLine();
             }
+            else if(inp[0] == "MD5")
+            {
+                Console.WriteLine(Functions.Functions.Md5(inp[1]));
+                Console.ReadLine();
+            }
         }
     }
 }
