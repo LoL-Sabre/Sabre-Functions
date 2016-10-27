@@ -123,6 +123,167 @@ namespace Functions
             blob.Receive(dataToSign, signature);
             return signature;
         } //WAD Header usage, Public key = WADPublicKey
+        public static string CompressRotHash(string toHash)
+        {
+            string hash = "";
+            toHash = toHash.ToLower();
+            for(int i = 0; i < toHash.Length; i++)
+            {
+                if(toHash[i] == 'a')
+                {
+                     hash += "Az";
+                }
+                else if(toHash[i] == 'b')
+                {
+                   hash += "Ay";  
+                }
+                else if(toHash[i] == 'c')
+                {
+                     hash += "ax";
+                }
+                else if(toHash[i] == 'd')
+                {
+                     hash += "Aw";
+                }
+                else if(toHash[i] == 'e')
+                {
+                     hash += "av";
+                }
+                else if(toHash[i] == 'f')
+                {
+                     hash += "Au";
+                }
+                else if(toHash[i] == 'g')
+                {
+                     hash += "at";
+                }
+                else if(toHash[i] == 'h')
+                {
+                     hash += "As";
+                }
+                else if(toHash[i] == 'i')
+                {
+                     hash += "Ar";
+                }
+                else if(toHash[i] == 'j')
+                {
+                     hash += "aq";
+                }
+                else if(toHash[i] == 'k')
+                {
+                     hash += "Ap";
+                }
+                else if(toHash[i] == 'l')
+                {
+                     hash += "ao";
+                }
+                else if(toHash[i] == 'm')
+                {
+                     hash += "an";
+                }
+                else if(toHash[i] == 'n')
+                {
+                     hash += "Am";
+                }
+                else if(toHash[i] == 'o')
+                {
+                     hash += "al";
+                }
+                else if(toHash[i] == 'p')
+                {
+                     hash += "ak";
+                }
+                else if(toHash[i] == 'q')
+                {
+                     hash += "Aj";
+                }
+                else if(toHash[i] == 'r')
+                {
+                     hash += "ai";   
+                }
+                else if(toHash[i] == 's')
+                {
+                     hash += "ah";
+                }
+                else if(toHash[i] == 't')
+                {
+                     hash += "Ag";
+                }
+                else if(toHash[i] == 'u')
+                {
+                     hash += "af";
+                }
+                else if(toHash[i] == 'v')
+                {
+                     hash += "Ae";  
+                }
+                else if(toHash[i] == 'w')
+                {
+                     hash += "ad";
+                }
+                else if(toHash[i] == 'x')
+                {
+                     hash += "Ac";
+                }
+                else if(toHash[i] == 'y')
+                {
+                     hash += "ab"; 
+                }
+                else if(toHash[i] == 'z')
+                {
+                     hash += "Aa";
+                }
+                else if(toHash[i] == '0')
+                {
+                     hash += "A9";
+                }
+                else if(toHash[i] == '1')
+                {
+                     hash += "A8";
+                }
+                else if(toHash[i] == '2')
+                {
+                     hash += "A7";
+                }
+                else if(toHash[i] == '3')
+                {
+                     hash += "A6";
+                }
+                else if(toHash[i] == '4')
+                {
+                     hash += "A5";
+                }
+                else if(toHash[i] == '5')
+                {
+                     hash += "A4";
+                }
+                else if(toHash[i] == '6')
+                {
+                     hash += "A3";
+                }
+                else if(toHash[i] == '7')
+                {
+                     hash += "A2";
+                }
+                else if(toHash[i] == '8')
+                {
+                     hash += "A1";
+                }
+                else if(toHash[i] == '9')
+                {
+                     hash += "A0";
+                } 
+                else if(toHash[i] == '-')
+                {
+                     hash += "_";
+                }
+                else if(toHash[i] == '_')
+                {
+                     hash += "-";
+                } 
+            }
+            return hash;
+        }
 
         public static string GetStringFromChars(char[] chars)
         {

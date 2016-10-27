@@ -38,6 +38,16 @@ namespace Tester
                 Console.WriteLine(Functions.Functions.Md5(inp[1]));
                 Console.ReadLine();
             }
+            else if(inp[0] == "RAFHASH")
+            {
+                Console.WriteLine(Functions.Functions.RafHash(inp[1]));
+                Console.ReadLine();
+            }
+            else if(inp[0] == "ROTHASHC")
+            {
+                Console.WriteLine(Functions.Functions.CompressRotHash(inp[1]));
+                Console.ReadLine();
+            }
         }
     }
 }
